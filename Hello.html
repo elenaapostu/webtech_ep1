@@ -6,13 +6,55 @@
         #mainContent{
         background-color:aqua;
         color:blue;
+        padding:50px;
+        }
+        p{
+            background-color:lightgreen;
+        }
+        
+        .buttonStyle{
+            background-color:lime;
+            height:25px;
+            font-size:12px;
+            width:80px;
+            cursor:pointer;
+        }
+        .buttonStyle:active{
+            background-color:magenta;
+            height:25px;
+            font-size:12px;
+            width:80px;
+            cursor:pointer;
+        
         }
     </style>
     </head>
 <body>
+    <h1>Apostu Elena</h1>
  <div id="mainContent">
-<h1>Apostu Elena</h1>
 <p>Acesta este un paragraf de text</p>
+<p>Al doilea paragraf</p>
+<button id = "btRo" class = "buttonStyle">Romana</button>
+<button id = "btEn" class = "buttonStyle">Engleza</button>
+<p id="varText"><b>?</b></p>
 </div>
+
+<script>
+    var text = document.getElementById("varText");
+    var br = document.getElementById("btRo");
+    var be = document.getElementById("btEn");
+    
+    br.addEventListener('click', scrie_ro, false);
+    be.addEventListener('click', scrie_en, false);
+    
+    function scrie_ro(){
+        text.textContent ="Cel de-al treilea paragraf!";
+    }
+    function scrie_en(){
+        text.textContent = "The third paragraph!";
+    }
+</script>
+
+
 </body>
 </html>
